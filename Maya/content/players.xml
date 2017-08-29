@@ -1,0 +1,9 @@
+<players root="gfx/characters/costumes/" 
+         portraitroot="gfx/ui/boss/" 
+         nameimageroot="gfx/ui/boss/" 
+         bigportraitroot="gfx/ui/stage/">
+	<player name="Maya" skin="Character_Maya.png" hp="2" 
+          nameimage="PlayerName_Maya.png" 
+          portrait="PlayerPortrait_Maya.png" 
+          bigportrait="PlayerPortraitBig_Maya.png" skinColor="-1" />
+</player>
