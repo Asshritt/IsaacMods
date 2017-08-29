@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive cache="damage" name="Xp!!" description="One step closer to the real thing." gfx="Xp.png" maxhearts="2" hearts="99"/>
+</items>

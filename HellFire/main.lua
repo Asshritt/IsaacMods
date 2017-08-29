@@ -1,6 +1,5 @@
 local MyMod = RegisterMod("HellFire",1)
 local COLLECTIBLE_HELLFIRE = Isaac.GetItemIdByName("HellFire")
-local tearflag = false
 
 function MyMod:onUseHellFire()
 	local player = Isaac.GetPlayer(0)

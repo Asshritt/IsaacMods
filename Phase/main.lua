@@ -1,6 +1,5 @@
 local MyMod = RegisterMod("Phase",1)
 local COLLECTIBLE_PHASE = Isaac.GetItemIdByName("Phase!!")
-local tearflag = false
 
 function MyMod:CacheUpdate(player, cacheFlag)
 	local player = Isaac.GetPlayer(0)
