@@ -1,14 +1,24 @@
 local MyMod = RegisterMod("HellFire",1)
 local COLLECTIBLE_HELLFIRE = Isaac.GetItemIdByName("HellFire")
+local nbTears = nil
+local dir
 
 function MyMod:onUseHellFire()
 	local player = Isaac.GetPlayer(0)
 	if player:GetShootingJoystick(player):Length() > 0.1 then
-		for i = 0 , 10 do
-			Isaac.Spawn(EntityType.ENTITY_TEAR, 0, 0, player.Position, player.GetShootingJoystick(player):Normalized() * 14 , player):ToEffect()
-		end
+		nbTears = 30
+		dir = player.GetShootingJoystick(player):Normalized()
 	end
 	return true
 end
 
+function MyMod:shootTears()
+	local player = Isaac.GetPlayer(0)
+	if nbTears ~= nil and nbTears ~= 0 then
+		Isaac.Spawn(EntityType.ENTITY_TEAR, 0, 0, player.Position, dir * 14 , player):ToEffect()
+		nbTears = nbTears - 1
+	end
+end
+
 MyMod:AddCallback(ModCallbacks.MC_USE_ITEM, MyMod.onUseHellFire, MyMod.COLLECTIBLE_HELLFIRE)
+MyMod:AddCallback(ModCallbacks.MC_POST_UPDATE, MyMod.shootTears)
