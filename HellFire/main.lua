@@ -1,5 +1,7 @@
 local MyMod = RegisterMod("HellFire",1)
-local COLLECTIBLE_HELLFIRE = Isaac.GetItemIdByName("HellFire")
+local ItemId = {
+	COLLECTIBLE_HELLFIRE = Isaac.GetItemIdByName("HellFire")
+}
 local nbTears = nil
 local dir
 
@@ -8,6 +10,8 @@ function MyMod:onUseHellFire()
 	if player:GetShootingJoystick(player):Length() > 0.1 then
 		nbTears = 30
 		dir = player.GetShootingJoystick(player):Normalized()
+	else 
+		
 	end
 	return true
 end
@@ -20,5 +24,5 @@ function MyMod:shootTears()
 	end
 end
 
-MyMod:AddCallback(ModCallbacks.MC_USE_ITEM, MyMod.onUseHellFire, MyMod.COLLECTIBLE_HELLFIRE)
+MyMod:AddCallback(ModCallbacks.MC_USE_ITEM, MyMod.onUseHellFire, ItemId.COLLECTIBLE_HELLFIRE)
 MyMod:AddCallback(ModCallbacks.MC_POST_UPDATE, MyMod.shootTears)
