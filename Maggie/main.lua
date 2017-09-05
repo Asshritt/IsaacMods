@@ -19,9 +19,9 @@ end
 
 function MyMod:shootTears()
 	local player = Isaac.GetPlayer(0)
-	-- if player:NeedsCharge() == true and Isaac:GetFrameCount() % 1 == 0 then
-		-- player:SetActiveCharge(player:GetActiveCharge() + 1)
-	-- end
+	if player:NeedsCharge() == true and Isaac:GetFrameCount() % 200 == 0 and player:HasCollectible(ItemId.COLLECTIBLE_MAGGIE) then
+		player:SetActiveCharge(player:GetActiveCharge() + 1)
+	end
 	if nbTears ~= nil and nbTears ~= 0 then
 		for i = 0 , 6 do
 			coef = math.random(8, 14)
