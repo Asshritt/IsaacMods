@@ -19,7 +19,7 @@ end
 function MyMod:shootTears()
 	local player = Isaac.GetPlayer(0)
 	if nbTears ~= nil and nbTears ~= 0 then
-		Isaac.Spawn(EntityType.ENTITY_TEAR, 0, 0, player.Position, dir * 14 , player):ToEffect()
+		Isaac.Spawn(EntityType.ENTITY_TEAR, 5, 0, player.Position, dir * 14 , player):ToEffect()
 		nbTears = nbTears - 1
 	end
 end
