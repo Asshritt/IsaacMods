@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive cache="all" name="Eridium bars" description="You can't get slag powers by swallowin’ this stuff!" gfx="Eridium Bars.png"/>
+</items>
