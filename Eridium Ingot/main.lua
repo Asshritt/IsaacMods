@@ -1,4 +1,4 @@
-local MyMod = RegisterMod("Eridium",1)
+local MyMod = RegisterMod("Eridium Ingot",1)
 local ItemId = {
 	COLLECTIBLE_ERIDIUM_BARS = Isaac.GetItemIdByName("Eridium bars")
 }

@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive cache="damage" name="Class Mod" description="Sounds like you need a Storage Deck Upgrade! Supplies limited." gfx="Class Mod.png"/>
+</items>

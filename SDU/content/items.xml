@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive cache="" name="SDU" description="Sounds like you need a Storage Deck Upgrade! Supplies limited." gfx="SDU.png" maxhearts="4"/>
+</items>
